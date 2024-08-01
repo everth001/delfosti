@@ -1,0 +1,221 @@
+.card-body.table-responsive.hide{
+    display: none;
+}
+.card-body.table-responsive{
+    display: block;
+}
+.newform{
+    display: none;
+}
+.newform.show{
+    display: flex;
+}
+.buttonsAtTheEnd{
+    display: flex;
+    justify-content: end;
+}
+.contRadio{
+    position: relative;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+    width: 100px;
+    height: 35px;
+    border-radius: 35px;
+    perspective: 200px;
+}
+input[type="checkbox"]{
+    position: relative;
+    width: 100px;
+    height: 35px;
+    margin: 0;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+    appearance: none;
+}
+.contRadio span{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    pointer-events: none;
+    color: #fff;
+    transform-style: preserve-3d;
+}
+.contRadio span:nth-child(2){
+    left: 0;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background: #f55145;
+}
+.contRadio span:nth-child(2):before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,#55b559,#3e8e41);
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    transform-origin: right;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+input[type="checkbox"]:checked ~ span:nth-child(2):before{
+   transform: rotateY(180deg);
+}
+.contRadio span:nth-child(3){
+    right: 0;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background: #55b559;
+}
+.contRadio span:nth-child(3):before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,#da190b,#f55145);
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    transform-origin: left;
+    transition: 1s;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+input[type="checkbox"]:checked ~ span:nth-child(3):before{
+   transform: rotateY(360deg);
+}
+.dataTables_length label{
+    display: flex;
+    width: 150px;
+    align-items: center;
+}
+.dataTables_length label .custom-select{
+    margin: 0px 5px;
+    text-align: center;
+}
+.dataTables_filter label{
+    display: flex;
+    align-items: center;
+}
+.user_contai{
+    position: relative;
+    background: #fff;
+    margin: 30px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-left: 50px solid #fff;
+    border-right: 50px solid #fff;
+    border-radius: 6px;
+    max-width: 1000px;
+}
+.user_contai .top{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 40px;
+    padding-bottom: 0;
+}
+.user_contai .top .imgBx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.user_contai .top .imgBx .box{
+    position: relative;
+    width: 50%;
+    min-width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+.user_contai .top .imgBx .box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.user_contai .top .profileText{
+    position: relative;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+}
+.user_h3{
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+    font-weight: 600;
+    color: #333;
+}
+.user_h3 .user_span{
+    position: relative;
+    font-size: 0.5em;
+    font-weight: 300;
+    top: -10px;
+}
+.user_contai .contentBox{
+    position: relative;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 40px 40px;
+}
+.user_contai .contentBox h3{
+    border-left: 4px solid #ff8bb3;
+    font-size: 1.3em;
+    padding-left: 10px;
+    line-height: 1em;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.user_contai .contentBox ul{
+    position: relative;
+    padding-left: 0;
+    margin: 10px 0;
+}
+.user_contai .contentBox ul li{
+    list-style: none;
+    margin: 25px 0;
+    line-height: 1em;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.user_contai .contentBox ul li span i{
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #3590d2;
+
+}
+.rightSide{
+    padding-left: 40px;
+}
+.rightSide .user_edit{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 125px;
+}
+.rightSide .user_edit h3{
+    margin-top: 20px; 
+}
+
+.rightSide .user_edit i{
+    font-size: 1.2em;
+    margin-left: 10px;
+}
